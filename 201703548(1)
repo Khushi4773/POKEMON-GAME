@@ -9,9 +9,9 @@ Grading Rubric:
 
 
     /* 	student Name:Khushpreet Kaur Dhlam
-    	student ID:201703548
-       	date:28 nov,2019
-       	name of work:  
+    	student ID: 201800211
+       	date: 28/11/2019
+       	name of work:  assignment 2
        	Language: PHP
     */
 
@@ -27,6 +27,7 @@ http://www.psypokes.com/lab/attacks.php
 5. Battles are done with Methods and Random Number Generators for Attack Strengths
 6. Use https://paiza.io/ to smith your Code.
   */
+
 Part ONE:
 <?php
 
@@ -42,7 +43,7 @@ class Pokemon
     }
 }
 $Pokeballs = array();
-for($counter=1; $counter<6; $counter++){
+for($counter=1; $counter<11; $counter++){           
     $Pikachu = new Pokemon;
     $Pikachu->PokemonName=(string)$counter;
     $Pokeballs[] = $Pikachu;
@@ -56,6 +57,31 @@ for($counter=1; $counter<6; $counter++){
 // Output the contestants and the Winners!!!
 // POKEMON: I CHOOSE YOU!
 
+
+<? php
+
+for($battlesCount = 1; $battlesCount<=10; $battleCount++){
+    
+                             // randomly pull 2 pokemon out of the pokeball: array name is $pokeballs
+                
+
+      $pokemon1=array_pop($Pokeballs);
+      $pokemon2=array_pop($Pokeballs);
+      
+      $pokemon1_attacksStrength = $pokemon1->doPokemonAttack();
+      $pokemon2_attacksStrength = $pokemon2->doPokemonAttack();
+      
+      echo"Pokemon 1 attack Strength :".$pokemon1_attacksStrength."\r\n";
+      echo"Pokemon 2 attack Strength :".$pokemon2_attacksStrength."\r\n";
+     
+}
+?>
+
+
+
+
+
+
 // Part Two: #todo: Give your Pokemon Names and Types: Create an array of Names
 // use rand to select a Name for each Pokemon
 // make sure to remove that name from the array so it is not issued Twice!!!  
@@ -64,3 +90,4 @@ for($counter=1; $counter<6; $counter++){
 
 echo "fini";
 ?>
+
